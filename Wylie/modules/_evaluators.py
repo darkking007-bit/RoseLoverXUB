@@ -10,7 +10,7 @@ async def ebent(event):
     cmd = "".join(event.message.message.split(maxsplit=1)[1:])
     if not cmd:
         return await event.edit("What should i execute?..")
-    catevent = await event.edit("Executing.....")
+    catevent = await event.edit("`Executing.....`")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -32,7 +32,7 @@ async def ubot(event):
     cmd = "".join(event.message.message.split(maxsplit=1)[1:])
     if not cmd:
         return
-    catevent= await event.edit("Running ...")
+    catevent= await event.edit("`Running ...`")
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
