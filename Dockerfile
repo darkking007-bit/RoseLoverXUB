@@ -1,4 +1,4 @@
-FROM python/latest
+FROM python:latest
 
 WORKDIR .
 RUN apt-get install neofetch -y
